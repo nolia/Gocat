@@ -1,4 +1,4 @@
-package gocat
+package crawl
 
 import (
 	"bytes"
@@ -6,10 +6,6 @@ import (
 
 	"golang.org/x/net/html"
 )
-
-type Visitor interface {
-	Visit(*html.Node)
-}
 
 func dsfWith(doc *html.Node, v func(*html.Node)) {
 	var f func(*html.Node)

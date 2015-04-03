@@ -1,4 +1,4 @@
-package gocat
+package crawl
 
 import (
 	"log"
@@ -23,7 +23,7 @@ func TestCollectLinks(t *testing.T) {
 	collected := CollectLinks(doc)
 
 	if len(collected) != 2 {
-		log.Fatal("Expected 2 links, found", len(collected))
+		log.Fatal("Expected 2 links, found ", len(collected))
 		t.Fail()
 	}
 
