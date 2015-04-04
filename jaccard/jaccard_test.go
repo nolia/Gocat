@@ -24,30 +24,3 @@ func TestSplitWord(t *testing.T) {
 		t.Fail()
 	}
 }
-
-func Test_StringSet_Add(t *testing.T) {
-	set := NewSet()
-	ok := set.Add("hello")
-
-	if !ok {
-		t.Fail()
-	}
-	ok = set.Add("hello")
-	if ok {
-		t.Fail()
-	}
-}
-
-func Test_StringSet_to_String(t *testing.T) {
-	set := NewSet()
-	set.Add("Hello")
-	set.Add("world")
-	toString := fmt.Sprintf("%v", set)
-	println("String() result: ", toString)
-
-	if toString != "{Hello, world}" {
-		log.Fatal("Expected '{Hello, world}', found: ", toString)
-		t.Fail()
-	}
-
-}
